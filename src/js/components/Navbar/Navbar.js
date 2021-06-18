@@ -7,15 +7,15 @@ const Navbar = () => {
   return (
     <div className="navigation">
       <h1 className="title__heading">
-        <Link className="title__heading__link" to="/">
+        <Link to="/" className="title__heading__link">
           My Blogs
         </Link>
       </h1>
       <div className="navigation__links">
-        <Link className="navigation__links__link" to="/">
+        <Link to="/" className="navigation__links__link">
           Home
         </Link>
-        <Link className="navigation__links__link" to="/create">
+        <Link to="/create" className="navigation__links__link">
           Create New Blog
         </Link>
       </div>
