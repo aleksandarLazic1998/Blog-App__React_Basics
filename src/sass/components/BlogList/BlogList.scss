@@ -1,0 +1,32 @@
+@import '../../shared/resets';
+@import '../../shared/colors';
+
+.blog__container {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+
+    .blog__item {
+        text-align: left;
+        margin: 15px 0px;
+        cursor: pointer;
+        background-color: #FEFBFB;
+
+        &:hover {
+            box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        &__title {
+            font-size: 1.5rem;
+            font-family: serif;
+            padding: 5px;
+            color: $seaPink;
+        }
+
+        &__author {
+            padding: 1rem;
+            font-size: 1rem;
+        }
+    }
+
+}
