@@ -1,3 +1,4 @@
+// Importing styles
 import "./css/Home.css";
 // Importing components
 import BlogList from "../BlogList/BlogList";
@@ -15,7 +16,9 @@ const Home = () => {
     <div className="home_component">
       <h2 className="title">All Blogs:</h2>
       <div className="blog-list">
+        {/* If error is occured render custom message in a div component */}
         {error && <div className="error__message">{error}</div>}
+        {/* If the Page is Loading render the div with the custom message */}
         {loading && (
           <div className="loading">Data is Fetching Please Wait a Moment</div>
         )}
