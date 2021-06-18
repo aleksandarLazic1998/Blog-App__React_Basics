@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home_component {
+  width: 75%;
+  margin: 0 auto;
+  height: 100%;
+  background-color: #F4F9FA;
+  margin-top: 2%;
+  border-radius: 10px 10px;
+}
+.home_component .title {
+  text-align: left;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border-bottom: solid 1px grey;
+}
+.home_component .blog-list {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+/*# sourceMappingURL=Home.css.map */
