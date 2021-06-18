@@ -1,5 +1,7 @@
 import './Home.css';
 import { useState } from "react";
+// Importing components
+import BlogList from '../BlogList/BlogList';
 
 const Home = () => {
     // Data that was hardcoded for the purpose of refacturing it later with database
@@ -23,7 +25,7 @@ const [blogs,setBlog]=useState([
        <div className="home_component">
         <h2 className="title">All Blogs:</h2>
         <div className="blog-list">
-        List where components are going to be put for each blog
+        <BlogList blogs={blogs}/>
         </div>
        </div> 
         );
