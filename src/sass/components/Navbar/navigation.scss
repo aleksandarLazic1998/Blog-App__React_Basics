@@ -1,0 +1,48 @@
+@import '../../shared/resets';
+@import '../../shared/colors';
+
+// Styling Navigation Bar
+.navigation {
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: auto;
+
+    // Title Of Navigation
+    .title__heading {
+        font-family: serif;
+        font-size: 3rem;
+        padding-top: 10px;
+        color: $blueZodiac;
+        cursor: pointer;
+
+        &__link {
+            text-decoration: none;
+
+            &:hover {
+                color: $pinkSalmon;
+            }
+        }
+    }
+
+    // Div of Links 
+    .navigation__links {
+        display: inline-flex;
+        justify-content: space-between;
+        width: 15%;
+
+        // Links Of Navigation
+        &__link {
+            padding: 2px;
+            cursor: pointer;
+            text-decoration: none;
+            color: $blueZodiac;
+
+            &:hover {
+                color: $pinkSalmon;
+            }
+        }
+    }
+}
