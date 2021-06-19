@@ -1,6 +1,4 @@
-// Importing Styles
 import "./css/navigation.css";
-// Importing LInks for React ROuter
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
