@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../../../../sass/shared/_resets.scss","../../../../sass/components/BlogDetails.scss","../../../../sass/shared/_colors.scss"],"names":[],"mappings":"AAAA;EACI;EACA;EACA;;;ACAJ;EACE;EACA;EACA;EACA;EACA;;AACA;EACI;EACA;EACA;EACA,OCXM;;ADaV;EACI;EACA;EACA,OCdO;EDeP;EACA;;AAEJ;EACI;EACA","file":"blogDetails.css"}

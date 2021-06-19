@@ -1,6 +1,7 @@
+import "./css/blogDetails.css";
 import { useParams } from "react-router-dom";
-import useFetch from "./components/shared/useFetch";
-
+import useFetch from "../shared/useFetch";
+import FirstLetterUp from "../shared/firstLetterUp";
 const BlogDetails = () => {
   const { id } = useParams();
   const {
@@ -21,7 +22,7 @@ const BlogDetails = () => {
       {blog && (
         <article className="blog__article">
           <h2 className="blog__article__title">{blog.title}</h2>
-          <p className="blog__article__author">Written by:{blog.author}</p>
+          <p className="blog__article__author">Written by: {FirstLetterUp(blog.author)}</p>
           <div className="blog__article__body">{blog.body}</div>
         </article>
       )}

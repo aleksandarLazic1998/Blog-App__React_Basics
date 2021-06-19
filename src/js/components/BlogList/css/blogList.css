@@ -13,7 +13,11 @@
   text-align: left;
   margin: 15px 0px;
   cursor: pointer;
-  background-color: #FEFBFB;
+  background-color: #fefbfb;
+  text-decoration: none;
+}
+.blog__container .blog__item__link {
+  text-decoration: none;
 }
 .blog__container .blog__item:hover {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
@@ -29,4 +33,4 @@
   font-size: 1rem;
 }
 
-/*# sourceMappingURL=BlogList.css.map */
+/*# sourceMappingURL=blogList.css.map */

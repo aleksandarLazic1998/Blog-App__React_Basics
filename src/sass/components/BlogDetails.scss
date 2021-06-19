@@ -1,0 +1,28 @@
+@import "../shared/resets";
+@import "../shared/colors";
+
+.blog__article {
+  width: 70%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius:10px 10px;
+  padding: 20px;
+  &__title{
+      font-size:2rem;
+      padding:10px;
+      font-family:serif;
+      color:$blueZodiac;
+  }
+  &__author{
+      text-align: left;
+      padding:5px;
+      color:$pinkSalmon;
+      font-size:1rem;
+      font-weight:bold;
+  }
+  &__body{
+      text-align:left;
+      line-height: 2.5rem;
+  }
+
+}
