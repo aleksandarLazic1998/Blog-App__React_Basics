@@ -1,8 +1,5 @@
-// Importing styles
 import "./css/Home.css";
-// Importing components
 import BlogList from "../BlogList/BlogList";
-// Importing Custom Hook
 import useFetch from "../shared/useFetch";
 
 const Home = () => {
