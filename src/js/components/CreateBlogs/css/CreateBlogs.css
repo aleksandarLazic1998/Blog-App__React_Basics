@@ -4,8 +4,9 @@
   box-sizing: border-box;
 }
 
-/* create new blog form */
-.create select, .create textarea, .create input {
+.create select,
+.create textarea,
+.create input {
   width: 100%;
   padding: 6px 10px;
   margin: 10px 0;
@@ -14,6 +15,7 @@
   display: block;
 }
 
+/* create new blog form */
 .create {
   max-width: 400px;
   margin: 0 auto;
