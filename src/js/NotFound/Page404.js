@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
-const Route path="/blogs/:id">
-<BlogDetails />
-</Route> = () => {
+const NotFound = () => {
     return ( 
         <div className="not__found">
             <h1>Sorry Page Not Found</h1>
