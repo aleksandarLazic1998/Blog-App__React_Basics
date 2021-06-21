@@ -1,15 +1,26 @@
 import "./css/blogDetails.css";
-import { useParams } from "react-router-dom";
+import { useParams,useHistory } from "react-router-dom";
 import useFetch from "../shared/useFetch";
 import FirstLetterUp from "../shared/firstLetterUp";
 
 const BlogDetails = () => {
+  const history = useHistory();
+
   const { id } = useParams();
   const {
     data: blog,
     loading,
     error,
   } = useFetch(`http://localhost:8000/blogs/${id}`);
+
+const handleDelete = () =>{
+  fetch(`http://localhost:8000/blogs/${blog.id}`,{
+    method: "DELETE"
+  })
+  .then(()=>{
+    history.push('/');
+  })
+}
 
   return (
     <div className="blog-details">
@@ -27,6 +38,7 @@ const BlogDetails = () => {
             Written by: {FirstLetterUp(blog.author)}
           </p>
           <div className="blog__article__body">{blog.body}</div>
+          <button onClick={handleDelete}>Delete Blog</button>
         </article>
       )}
     </div>
