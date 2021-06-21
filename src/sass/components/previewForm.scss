@@ -1,0 +1,59 @@
+@import "../shared/colors";
+
+.preview__form {
+  visibility: hidden;
+  position: fixed;
+
+  label {
+    text-align: left;
+    display: block;
+  }
+  &__title {
+    border: 1px solid black;
+    padding: 1px;
+  }
+  &__body {
+    border: 1px solid black;
+    padding: 1px;
+  }
+  &__author {
+    border: 1px solid black;
+    padding: 1px;
+  }
+  &__gender {
+    border: 1px solid black;
+    padding: 1 px;
+  }
+}
+
+.active {
+  visibility: visible;
+  width: 30%;
+  height: 60%;
+  padding: 6px 10px;
+  margin: 0 auto;
+  border: 1px solid black;
+  box-sizing: border-box;
+  display: block;
+  background-color: white;
+  left: 35%;
+  top: 10%;
+  position: fixed;
+  z-index: 100000000;
+}
+.image__btn {
+  cursor: pointer;
+  float: right;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 10px 0 10px 0;
+  margin-bottom: 1rem;
+  background-color: $pinkSalmon;
+  color: green;
+}
+.submitBtn {
+  position: absolute;
+  bottom: 0;
+  left: 42.5%;
+  cursor: pointer;
+}
