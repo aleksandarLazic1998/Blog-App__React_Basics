@@ -1,9 +1,10 @@
+import "./css/CreateBlogs.css";
+import Form from "./components/Form";
+
 const CreateBlogs = () => {
-  return (
-    <div className="create-blog-container">
-      <p className="tag">Create New Blog</p>
-    </div>
-  );
+  return(
+    <Form />
+  )
 };
 
 export default CreateBlogs;
