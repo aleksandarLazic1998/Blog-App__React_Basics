@@ -23,6 +23,10 @@ function App() {
           <Route path="/blogs/:id">
             <BlogDetails />
           </Route>
+          {/* If User go to Non Matching Route */}
+          <Route path="*">
+            <NotFound />
+          </Route>
         </Switch>
       </div>
     </Router>
