@@ -1,5 +1,6 @@
 import { useState } from "react";
 import DivPreview from "./Preview.js";
+import { useHistory } from "react-router-dom";
 
 const Form = () => {
   const [title, setTitle] = useState("");
@@ -9,6 +10,8 @@ const Form = () => {
   const [active, setActive] = useState(true);
   const [formClass, setFormClass] = useState("preview__form");
   const [isLoading, setIsLoading] = useState(false);
+  const history = useHistory();
+  console.log(history);
 
   // Method for changing class
   const handlePreview = (e) => {
@@ -22,12 +25,14 @@ const Form = () => {
     const blogObject = { title, body, author };
     setIsLoading(true);
 
-    fetch(`http://localhost:8000/blogs`, {
+    // POST METHOD
+    fetch("http://localhost:8000/blogs", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(blogObject),
     }).then(() => {
       setIsLoading(false);
+      history.push("/");
     });
   };
 
@@ -77,9 +82,10 @@ const Form = () => {
           handleExit={handleExit}
         />
       </form>
-      {!isLoading && <button onClick={handlePreview}>Check Before Submit</button>}
+      {!isLoading && (
+        <button onClick={handlePreview}>Check Before Submit</button>
+      )}
       {isLoading && <button disabled>Adding Blog ...</button>}
-
     </div>
   );
 };
