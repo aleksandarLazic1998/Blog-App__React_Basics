@@ -8,6 +8,7 @@ const Form = () => {
   const [gender, setGender] = useState("Male");
   const [active, setActive] = useState(true);
   const [formClass, setFormClass] = useState("preview__form");
+  const [isLoading, setIsLoading] = useState(false);
 
   // Method for changing class
   const handlePreview = (e) => {
@@ -18,7 +19,16 @@ const Form = () => {
   //   Method to create object for API
   const handleSubmit = (e) => {
     e.preventDefault();
-    // const blogObject = { title, body, author };
+    const blogObject = { title, body, author };
+    setIsLoading(true);
+
+    fetch(`http://localhost:8000/blogs`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(blogObject),
+    }).then(() => {
+      setIsLoading(false);
+    });
   };
 
   //   Method to change Values in form if User Wants to change informations
@@ -67,7 +77,9 @@ const Form = () => {
           handleExit={handleExit}
         />
       </form>
-      <button onClick={handlePreview}>Check Before Submit</button>
+      {!isLoading && <button onClick={handlePreview}>Check Before Submit</button>}
+      {isLoading && <button disabled>Adding Blog ...</button>}
+
     </div>
   );
 };
