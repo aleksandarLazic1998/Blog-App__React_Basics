@@ -1,7 +1,7 @@
 @import "../shared/resets";
 @import "../shared/colors";
 
-/* create new blog form */
+// Reusable Class
 %reusable-sass {
   width: 100%;
   padding: 6px 10px;
@@ -10,6 +10,7 @@
   box-sizing: border-box;
   display: block;
 }
+/* create new blog form */
 .create {
   max-width: 400px;
   margin: 0 auto;
