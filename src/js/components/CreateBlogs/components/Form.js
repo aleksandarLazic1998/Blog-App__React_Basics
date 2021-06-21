@@ -1,5 +1,6 @@
 import { useState } from "react";
 import DivPreview from "./Preview.js";
+import { useHistory } from "react-router-dom";
 
 const Form = () => {
   const [title, setTitle] = useState("");
@@ -8,6 +9,8 @@ const Form = () => {
   const [gender, setGender] = useState("Male");
   const [active, setActive] = useState(true);
   const [formClass, setFormClass] = useState("preview__form");
+  const [isLoading, setIsLoading] = useState(false);
+  const history = useHistory();
 
   // Method for changing class
   const handlePreview = (e) => {
@@ -18,12 +21,22 @@ const Form = () => {
   //   Method to create object for API
   const handleSubmit = (e) => {
     e.preventDefault();
-    // const blogObject = { title, body, author };
+    const blogObject = { title, body, author };
+    setIsLoading(true);
+
+    // POST METHOD
+    fetch("http://localhost:8000/blogs", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(blogObject),
+    }).then(() => {
+      setIsLoading(false);
+      history.push("/");
+    });
   };
 
   //   Method to change Values in form if User Wants to change informations
   const handleExit = () => {
-    console.log("clicked");
     setActive(!active);
     setFormClass(active ? "active" : "preview__form");
   };
@@ -67,7 +80,10 @@ const Form = () => {
           handleExit={handleExit}
         />
       </form>
-      <button onClick={handlePreview}>Check Before Submit</button>
+      {!isLoading && (
+        <button onClick={handlePreview}>Check Before Submit</button>
+      )}
+      {isLoading && <button disabled>Adding Blog ...</button>}
     </div>
   );
 };
