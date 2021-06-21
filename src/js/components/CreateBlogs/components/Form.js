@@ -11,7 +11,6 @@ const Form = () => {
   const [formClass, setFormClass] = useState("preview__form");
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
-  console.log(history);
 
   // Method for changing class
   const handlePreview = (e) => {
@@ -38,7 +37,6 @@ const Form = () => {
 
   //   Method to change Values in form if User Wants to change informations
   const handleExit = () => {
-    console.log("clicked");
     setActive(!active);
     setFormClass(active ? "active" : "preview__form");
   };

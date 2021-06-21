@@ -15,18 +15,25 @@
   font-size: 2rem;
   padding: 10px;
   font-family: serif;
-  color: #0A1931;
+  color: #0a1931;
 }
 .blog__article__author {
   text-align: left;
   padding: 5px;
-  color: #FF96AD;
+  color: #ff96ad;
   font-size: 1rem;
   font-weight: bold;
 }
 .blog__article__body {
   text-align: left;
   line-height: 2.5rem;
+}
+button {
+  padding: 5px;
+  color: #ff96ad;
+  width: 10%;
+  height: 100%;
+  cursor:ponter;
 }
 
 /*# sourceMappingURL=blogDetails.css.map */
