@@ -5,24 +5,30 @@
   width: 70%;
   margin: 0 auto;
   background-color: white;
-  border-radius:10px 10px;
+  border-radius: 10px 10px;
   padding: 20px;
-  &__title{
-      font-size:2rem;
-      padding:10px;
-      font-family:serif;
-      color:$blueZodiac;
+  &__title {
+    font-size: 2rem;
+    padding: 10px;
+    font-family: serif;
+    color: $blueZodiac;
   }
-  &__author{
-      text-align: left;
-      padding:5px;
-      color:$pinkSalmon;
-      font-size:1rem;
-      font-weight:bold;
+  &__author {
+    text-align: left;
+    padding: 5px;
+    color: $pinkSalmon;
+    font-size: 1rem;
+    font-weight: bold;
   }
-  &__body{
-      text-align:left;
-      line-height: 2.5rem;
+  &__body {
+    text-align: left;
+    line-height: 2.5rem;
   }
-
+  button {
+    padding: 5px;
+    color: #ff96ad;
+    width: 10%;
+    height: 100%;
+    cursor: ponter;
+  }
 }
